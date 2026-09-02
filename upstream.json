@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/shotatykr/thinkmove-design-system",
+  "commit": "eb3d5465370be42681a3611a45adeeaed2b95301",
+  "syncedPaths": [
+    "worldview/core.md",
+    "worldview/voice.md",
+    "theme/design.json",
+    "theme/globals.css",
+    "assets/"
+  ],
+  "policy": "Assets are reference inputs for full-image generation, not post-compositing parts."
+}

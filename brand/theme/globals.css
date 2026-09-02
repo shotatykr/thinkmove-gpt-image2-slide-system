@@ -1,0 +1,166 @@
+/* =========================================================================
+   ThinkMove Design Tokens v2 — Apple × Vercel hybrid
+   実装の正: projects/thinkmove-tools/app/globals.css （内部モノレポ）から抽出
+   思想の正: ../worldview/core.md
+   ========================================================================= */
+
+:root {
+  /* ── Core Palette ──
+     ink     = 最も深い navy。CTA前のボタン、ダーク section、flagship card
+     primary = 中間 navy。light 上の見出し、icon accent
+     cta     = teal。インタラクティブな前進アクセント (Worldview §8.1: CTA専任)
+     accent  = orange。**広面禁止・CTA禁止**、限定ハイライトのみ (Worldview §8.1) */
+  --tm-ink: #0a1628;
+  --tm-primary: #1e3a5f;
+  --tm-primary-dark: #0f2440;
+  --tm-primary-light: #eef4fa;
+  --tm-primary-50: #f5f8fc;
+
+  --tm-cta: #0d9488;
+  --tm-cta-dark: #0a7a70;
+  --tm-cta-light: #e6f5f3;
+
+  --tm-accent: #f97316;
+  --tm-accent-muted: #b45309;
+
+  /* ── Neutrals ── */
+  --tm-bg: #fafbfc;
+  --tm-bg-alt: #f4f6f8;
+  --tm-bg-tint: #fafbfc;
+
+  --tm-text: #0f1729;
+  --tm-text-body: #475569;
+  --tm-text-secondary: #64748b;
+  --tm-text-tertiary: #94a3b8;
+
+  --tm-border: rgba(15, 36, 64, 0.08);
+  --tm-border-hover: rgba(15, 36, 64, 0.16);
+
+  /* ── Shadow-as-border (Vercel methodology, Worldview §8.6) ── */
+  --tm-ring: 0 0 0 1px rgba(15, 36, 64, 0.08);
+  --tm-ring-strong: 0 0 0 1px rgba(15, 36, 64, 0.14);
+  --tm-shadow-sm: 0 1px 2px rgba(15, 36, 64, 0.04), 0 0 0 1px rgba(15, 36, 64, 0.06);
+  --tm-shadow-md: 0 4px 12px rgba(15, 36, 64, 0.06), 0 0 0 1px rgba(15, 36, 64, 0.06);
+  --tm-shadow-lg: 0 20px 48px rgba(15, 36, 64, 0.10), 0 0 0 1px rgba(15, 36, 64, 0.06);
+
+  /* ── Motion (Worldview §8.6: 意味があるときだけ) ── */
+  --tm-transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tm-transition-slow: 420ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Radius (4-step scale, Worldview §8.6: 8〜20px) ── */
+  --tm-r-sm: 8px;
+  --tm-r-md: 12px;
+  --tm-r-lg: 16px;
+  --tm-r-xl: 20px;
+  --tm-r-pill: 9999px;
+}
+
+/* ── Typography ──
+   日本語向け palt ON、Latin 専用は tracking-tight-latin で別途。 */
+body {
+  font-family: 'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--tm-bg);
+  color: var(--tm-text-body);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  color: var(--tm-text);
+  font-feature-settings: 'palt' 1;
+}
+h1 { letter-spacing: -0.01em;  line-height: 1.25; font-weight: 700; }
+h2 { letter-spacing: -0.005em; line-height: 1.35; font-weight: 700; }
+h3 { letter-spacing: 0;         line-height: 1.45; font-weight: 600; }
+
+.tracking-tight-latin { letter-spacing: -0.02em; }
+
+.tm-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tm-cta-dark);
+}
+
+.tm-number-highlight {
+  color: var(--tm-ink);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--tm-cta);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Buttons (3 variants) ── */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--tm-ink); color: #ffffff;
+  border-radius: var(--tm-r-sm); padding: 12px 22px;
+  font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.01em;
+  transition: background var(--tm-transition), transform var(--tm-transition), box-shadow var(--tm-transition);
+}
+.btn-primary:hover { background: #050b18; box-shadow: 0 6px 16px rgba(10, 22, 40, 0.24); transform: translateY(-1px); }
+
+.btn-cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: var(--tm-cta); color: #ffffff;
+  border-radius: var(--tm-r-sm); padding: 14px 26px;
+  font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.01em;
+  transition: background var(--tm-transition), transform var(--tm-transition), box-shadow var(--tm-transition);
+}
+.btn-cta:hover { background: var(--tm-cta-dark); box-shadow: 0 8px 20px rgba(13, 148, 136, 0.24); transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: transparent; color: var(--tm-text);
+  border-radius: var(--tm-r-sm); padding: 12px 22px;
+  font-weight: 500; font-size: 0.9375rem;
+  box-shadow: var(--tm-ring);
+  transition: box-shadow var(--tm-transition), background var(--tm-transition);
+}
+.btn-ghost:hover { background: var(--tm-bg-alt); box-shadow: var(--tm-ring-strong); }
+
+/* ── Cards (shadow-as-border only, no border lines) ── */
+.card {
+  background: #ffffff;
+  border-radius: var(--tm-r-md);
+  border: none;
+  box-shadow: var(--tm-shadow-sm);
+  transition: box-shadow var(--tm-transition), transform var(--tm-transition);
+}
+a.card:hover, button.card:hover {
+  box-shadow: var(--tm-shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-elevated {
+  background: #ffffff;
+  border-radius: var(--tm-r-lg);
+  box-shadow: var(--tm-shadow-md);
+}
+
+/* ── Section rhythm (Apple-style binary alternation) ── */
+.section-light { background: var(--tm-bg); }
+.section-tint  { background: var(--tm-bg-alt); }
+.section-dark  { background: var(--tm-ink); color: #f1f5f9; }
+.section-dark h1, .section-dark h2, .section-dark h3 { color: #ffffff; }
+
+.section-pad    { padding-top: 96px;  padding-bottom: 96px; }
+.section-pad-lg { padding-top: 120px; padding-bottom: 120px; }
+.section-pad-sm { padding-top: 64px;  padding-bottom: 64px; }
+
+/* ── Animations (Worldview §8.6 許可リストのみ) ── */
+@keyframes tm-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tm-fade-up { animation: tm-fade-up 0.5s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tm-fade-up { opacity: 1; transform: none; animation: none; }
+}

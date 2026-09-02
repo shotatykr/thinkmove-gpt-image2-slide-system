@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  repository:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install system validators
+        run: sudo apt-get update && sudo apt-get install -y jq libxml2-utils
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Validate repository contract
+        run: bash scripts/validate_repo.sh
+      - name: Compile scripts
+        run: python -m py_compile scripts/build_contact_sheet.py scripts/build_pptx.py
+      - name: Exercise output wrappers
+        run: |
+          python scripts/build_contact_sheet.py examples/taste-previews /tmp/contact-sheet.png
+          python scripts/build_pptx.py examples/taste-previews /tmp/example.pptx
+          unzip -t /tmp/example.pptx

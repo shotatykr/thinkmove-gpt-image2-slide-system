@@ -1,0 +1,54 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "ThinkMove Design Tokens v2 (W3C Design Tokens Community Group format). Mirror of theme/globals.css. AI tools (Pencil/Figma AI/Claude Design) read this for color/radius/shadow application.",
+  "color": {
+    "ink":           { "$value": "#0a1628", "$type": "color", "$description": "最深 navy。CTA前のボタン、ダーク section、flagship card" },
+    "primary":       { "$value": "#1e3a5f", "$type": "color", "$description": "中間 navy。light 上の見出し、icon accent" },
+    "primary-dark":  { "$value": "#0f2440", "$type": "color" },
+    "primary-light": { "$value": "#eef4fa", "$type": "color" },
+    "primary-50":    { "$value": "#f5f8fc", "$type": "color" },
+    "cta":           { "$value": "#0d9488", "$type": "color", "$description": "teal。インタラクティブな前進アクセント。CTA専任" },
+    "cta-dark":      { "$value": "#0a7a70", "$type": "color" },
+    "cta-light":     { "$value": "#e6f5f3", "$type": "color" },
+    "accent":        { "$value": "#f97316", "$type": "color", "$description": "orange。広面禁止・CTA禁止、限定ハイライトのみ。比率目安1%" },
+    "accent-muted":  { "$value": "#b45309", "$type": "color" },
+    "bg":            { "$value": "#fafbfc", "$type": "color" },
+    "bg-alt":        { "$value": "#f4f6f8", "$type": "color" },
+    "text":          { "$value": "#0f1729", "$type": "color", "$description": "見出し用 near-black navy" },
+    "text-body":     { "$value": "#475569", "$type": "color", "$description": "本文用 slate-600" },
+    "text-secondary":{ "$value": "#64748b", "$type": "color" },
+    "text-tertiary": { "$value": "#94a3b8", "$type": "color" }
+  },
+  "radius": {
+    "sm":   { "$value": "8px",    "$type": "dimension", "$description": "buttons, chips, small cards" },
+    "md":   { "$value": "12px",   "$type": "dimension", "$description": "default card" },
+    "lg":   { "$value": "16px",   "$type": "dimension", "$description": "feature cards" },
+    "xl":   { "$value": "20px",   "$type": "dimension", "$description": "hero cards" },
+    "pill": { "$value": "9999px", "$type": "dimension" }
+  },
+  "shadow": {
+    "ring":        { "$value": "0 0 0 1px rgba(15,36,64,0.08)",  "$type": "shadow" },
+    "ring-strong": { "$value": "0 0 0 1px rgba(15,36,64,0.14)",  "$type": "shadow" },
+    "sm":          { "$value": "0 1px 2px rgba(15,36,64,0.04), 0 0 0 1px rgba(15,36,64,0.06)",  "$type": "shadow" },
+    "md":          { "$value": "0 4px 12px rgba(15,36,64,0.06), 0 0 0 1px rgba(15,36,64,0.06)", "$type": "shadow" },
+    "lg":          { "$value": "0 20px 48px rgba(15,36,64,0.10), 0 0 0 1px rgba(15,36,64,0.06)","$type": "shadow" }
+  },
+  "motion": {
+    "transition":      { "$value": "180ms cubic-bezier(0.4,0,0.2,1)", "$type": "transition" },
+    "transition-slow": { "$value": "420ms cubic-bezier(0.4,0,0.2,1)", "$type": "transition" }
+  },
+  "typography": {
+    "font-base":    { "$value": "'Noto Sans JP', 'Helvetica Neue', Arial, sans-serif", "$type": "fontFamily" },
+    "line-height":  { "$value": "1.75", "$type": "number" },
+    "h1": { "$value": { "letter-spacing": "-0.01em",  "line-height": "1.25", "font-weight": "700" }, "$type": "typography" },
+    "h2": { "$value": { "letter-spacing": "-0.005em", "line-height": "1.35", "font-weight": "700" }, "$type": "typography" },
+    "h3": { "$value": { "letter-spacing": "0",         "line-height": "1.45", "font-weight": "600" }, "$type": "typography" }
+  },
+  "rules": {
+    "color-ratio":   "白70% / Navy 15% / Gray 10% / Teal 4% / Orange 1%",
+    "cta-color":     "always cta (teal). NEVER use accent (orange) for CTA.",
+    "accent-usage":  "限定ハイライトのみ。広面禁止。",
+    "shadow-style":  "shadow-as-border (Vercel methodology). 太い border lines は使わない。",
+    "motion":        "意味があるときだけ。許可: fade-in/up, hover浮き, count-up. 禁止: parallax, autoplay, blink, bounce."
+  }
+}

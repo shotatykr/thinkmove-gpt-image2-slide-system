@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" font-family="Noto Sans JP, sans-serif">
+<path d="M240 30 L330 120 H150 z" fill="#e6f5f3" stroke="rgba(15,36,64,0.14)"/>
+<path d="M138 132 h204 l60 60 H78 z" fill="#f5f8fc" stroke="rgba(15,36,64,0.14)"/>
+<path d="M66 204 h348 l60 60 H6 z" fill="#f5f8fc" stroke="rgba(15,36,64,0.14)"/>
+<text x="240" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#0a7a70">上位概念</text>
+<text x="240" y="165" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a5f">中位の要素</text>
+<text x="240" y="182" text-anchor="middle" font-size="10.5" fill="#475569">ここに説明</text>
+<text x="240" y="237" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a5f">土台となる要素</text>
+<text x="240" y="254" text-anchor="middle" font-size="10.5" fill="#475569">ここに説明</text>
+</svg>
