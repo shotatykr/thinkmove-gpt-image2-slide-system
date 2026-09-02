@@ -45,11 +45,14 @@ sourceの文章、表、画像、画面、発言を列挙する。確認でき�
 
 最初に表紙または基準ページを生成し、承認した画像を後続ページのstyle referenceとして使う。
 
+既存の用途と近い承認済みデッキが[`../examples/approved-decks/`](../examples/approved-decks/)にある場合は、そのREADMEに記載された本文基準を最初のstyle referenceにできる。contact sheet全体ではなく、ページ役割に近いanchorを1〜2枚だけ選ぶ。
+
 - 比率は16:9
 - 全ページでpalette、線、陰影、人物比率、情報密度を揃える
 - 同じ構図を3ページ以上続けない
 - 同じ画像を別ページで使い回さない
 - 用途に合うtasteを1つだけ主基準にする
+- 表紙固有のgeometryを本文基準にしない
 
 ## 6. GPT-image2で完成画像を生成する
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- 表紙固有の斜め帯やgeometryを本文へ継承しないルールを追加
+- 表紙基準と本文基準を分離し、本文の下部コンテンツ領域を保護
+- 装飾とカード・結論バーの接触をQA項目へ追加
+- 初の承認済みデッキ参照`quiet-proposal-ai-dialogue-seminar-v1`を追加
+- 完成デッキのcontact sheetと、ページ役割別anchorの使い分けを定義
+
 ## 0.2.0 — 2026-09-02
 
 - `DESIGN.md`と`STYLE.md`をトップ階層へ追加
