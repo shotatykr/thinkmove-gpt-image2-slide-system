@@ -1,0 +1,42 @@
+[
+  {
+    "id": "normal-seminar",
+    "purpose": "標準的なセミナー本文で、結論型タイトルと3要素の情報階層を保つ",
+    "page_role": "evidence",
+    "exact_text": ["検索体験そのものが変わった", "検索結果を見る", "AIに直接聞く", "SNSや動画で調べる"],
+    "reference_anchor": "02-content-baseline.png",
+    "critical_checks": ["exact_text", "content_spacing", "visual_family"]
+  },
+  {
+    "id": "dense-process",
+    "purpose": "高密度な工程でも下部装飾と内容を衝突させない",
+    "page_role": "process",
+    "exact_text": ["明日から変える4つのこと", "問いを変える", "一次情報を増やす", "外部接点を作る", "KPIを広げる"],
+    "reference_anchor": "19-timeline.png",
+    "critical_checks": ["exact_text", "lower_edge_clearance", "no_tiny_text"]
+  },
+  {
+    "id": "exact-japanese-numbers",
+    "purpose": "日本語、固有名詞、数字、単位、期間をsourceどおりに描く",
+    "page_role": "evidence",
+    "exact_text": ["自然検索流入は12か月で比較する", "2025年9月〜2026年8月", "前年比 +18.4%", "指名検索 1,284件"],
+    "reference_anchor": "03-comparison-graph.png",
+    "critical_checks": ["exact_text", "no_invented_numbers", "readable_units"]
+  },
+  {
+    "id": "profile-brand",
+    "purpose": "ロゴと人物写真を生成内へ統合し、後合成なしで自然な挨拶ページにする",
+    "page_role": "greeting",
+    "exact_text": ["豊藏翔太", "シンクムーブ株式会社 代表取締役", "AI × SEO × マーケティング"],
+    "reference_anchor": "02-content-baseline.png",
+    "critical_checks": ["exact_text", "recognizable_likeness", "no_unrelated_logo", "no_pixel_identity_claim"]
+  },
+  {
+    "id": "deck-role-rhythm",
+    "purpose": "表紙、本文、章扉、結論でgeometryを変えながら同じvisual familyを保つ",
+    "page_role": "mini-deck",
+    "exact_text": ["SEOの次に、何をする？", "SEOだけでは足りない", "選ばれる設計へ", "マーケティングに戻る"],
+    "reference_anchor": "quiet-proposal-ai-dialogue-seminar-v1",
+    "critical_checks": ["cover_content_separation", "visual_family", "narrative_rhythm", "closing_action"]
+  }
+]

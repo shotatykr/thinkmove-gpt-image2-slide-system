@@ -1,0 +1,5 @@
+interface:
+  display_name: "ThinkMove GPT-image2 Slide"
+  short_description: "GPT-image2で日本語・ロゴ・人物まで完成スライド化"
+  brand_color: "#1e3a5f"
+  default_prompt: "Use $thinkmove-gpt-image2-slide to create a complete ThinkMove deck as GPT-image2 slide images."

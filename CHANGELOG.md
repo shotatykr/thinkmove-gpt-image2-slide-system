@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- GPT-image2全面生成専用のrepo-scoped skillを追加
+- deck Manifest schemaと生成前／release時の検証を追加
+- 画像寸法、欠番、採用試行を検査するファイルQAを追加
+- 最大3試行、hard fail 0件、90点以上、人の承認をrelease条件として固定
+- 5種類の固定ケースと回帰評価rubricを追加
+- skill、prompt、schema、quality contractのversion正本を追加
 - 表紙固有の斜め帯やgeometryを本文へ継承しないルールを追加
 - 表紙基準と本文基準を分離し、本文の下部コンテンツ領域を保護
 - 装飾とカード・結論バーの接触をQA項目へ追加

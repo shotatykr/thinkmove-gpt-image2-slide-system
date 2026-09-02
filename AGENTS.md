@@ -2,16 +2,18 @@
 
 このリポジトリは、ThinkMoveのスライドを**1ページ1枚の完成画像としてGPT-image2で生成する**ための正本です。
 
+このリポジトリ内の制作では、後合成を前提にした旧`thinkmove-style-slide-creator`を使わない。`.agents/skills/thinkmove-gpt-image2-slide/`を唯一の制作入口にする。
+
 ## 最初に読む順番
 
-1. `AGENTS.md`
+1. `.agents/skills/thinkmove-gpt-image2-slide/SKILL.md`
 2. `DESIGN.md`
 3. `STYLE.md`
 4. `system/production-guide.md`
-5. `system/reference-input-policy.md`
-6. `system/prompt-contract.md`
+5. `system/manifest-contract.md`
+6. `system/reference-input-policy.md`
 7. 用途に合う`tastes/*.md`を1つだけ
-8. `prompts/base-slide.md`
+8. 用途に合う`examples/approved-decks/*/README.md`を1つだけ
 9. 必要時だけ`brand/worldview/`と`brand/theme/design.json`
 10. 出力前に`system/qa-checklist.md`
 
@@ -28,6 +30,8 @@
 - 一次情報が不足する場合は、一般論で埋めず不足を報告する
 - 全ページを同じ比率、同じvisual familyで生成する
 - 最後にcontact sheetで連続性を確認する
+- 生成前にManifestを検証し、生成条件、参照、全試行、QAを記録する
+- 初回を含む最大3試行で止め、意味を変える短縮は人の判断を待つ
 
 ## 参照画像
 
@@ -51,9 +55,11 @@
 ```text
 outputs/<deck-slug>/
 ├── source/
+├── manifest.json
 ├── prompts/
 ├── raw/
 ├── final/
+├── qa-images.json
 ├── contact-sheet.png
 ├── final.pptx
 └── qa.md

@@ -20,12 +20,15 @@ sourceをもとに、ThinkMoveのスライド資料を作成してください�
 1. sourceから確認済みの事実と不足情報を分ける
 2. Audience / Job / Decision / Takeaway / Evidenceを固定する
 3. タイトルだけで全体の論理を作る
-4. 各ページのClaim / Evidence / Visual job / Must render / Referencesを定義する
-5. primary tasteを1つ選ぶ
-6. 表紙基準と、標準的な情報量を入れた本文基準を別々に生成する
-7. 本文へ継承するのはpalette、typography、texture、線の品質だけとし、表紙固有のgeometryや斜め帯は継承しない
-8. QA checklistを通し、不合格ページだけ再生成する
-9. contact sheetとPPTXを作る
+4. 各ページのClaim / Evidence / Visual job / Must render / ReferencesをManifestへ記録する
+5. Manifestのdraft検証を通す
+6. primary tasteとapproved reference IDを1つずつ選ぶ
+7. 表紙基準と、標準的な情報量を入れた本文基準を別々に生成する
+8. 本文へ継承するのはpalette、typography、texture、線の品質だけとし、表紙固有のgeometryや斜め帯は継承しない
+9. 4〜5枚ごとに個別QAとcontact sheet QAを行う
+10. 不合格ページは最大2回再生成し、全試行をManifestへ記録する
+11. hard fail 0件、90点以上、人の承認を満たした画像だけをfinalへ置く
+12. release検証後にcontact sheetとPPTXを作る
 
 sourceにない数字、成果、引用、顧客情報を作らないでください。
 ```
