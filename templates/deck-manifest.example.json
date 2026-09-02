@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "deck_id": "seo-next-seminar",
+  "title": "SEOの次に、何をする？",
+  "mode": "image-native",
+  "brief": {
+    "audience": "SEOとAI検索への投資を考えるマーケティング担当者",
+    "job": "検索順位だけではない次の投資先を整理する",
+    "decision": "自社の検索・AI・指名施策を3層で見直す",
+    "takeaway": "SEOの次はマーケティング全体へ戻る",
+    "format": "spoken"
+  },
+  "sources": [{"id": "deck-brief", "location": "source/deck-brief.json", "sha256": null, "verified": true, "notes": "豊藏確認済みのスライド構成"}],
+  "versions": {"skill": "1.0.0", "prompt": "1.0.0", "reference_id": "quiet-proposal-ai-dialogue-seminar-v1", "system_commit": "REPLACE_WITH_SYSTEM_COMMIT", "design_commit": "eb3d5465370be42681a3611a45adeeaed2b95301"},
+  "generation": {"route": "built-in-imagegen", "model": "gpt-image-2", "quality": "high", "width": 1536, "height": 864, "max_attempts": 3},
+  "slides": [
+    {
+      "index": 1,
+      "role": "cover",
+      "title": "SEOの次に、何をする？",
+      "claim": "検索流入だけを見る時代の次を考える",
+      "visible_japanese": ["SEOの次に、何をする？", "AI検索時代のマーケティング戦略"],
+      "copy_locked": true,
+      "evidence": ["deck-brief"],
+      "visual_job": "検索の入口が複線化した変化を静かに提示する",
+      "anchor": "examples/approved-decks/ai-dialogue-seminar/anchors/01-cover.png",
+      "avoid": ["本文ページへ転用する大きな左下装飾", "装飾英語"],
+      "status": "planned",
+      "selected_attempt": null,
+      "attempts": [],
+      "qa": {"hard_failures": [], "scores": {"source_fidelity": 0, "readability": 0, "visual_family": 0, "layout_spacing": 0, "narrative_role": 0, "brand_handling": 0}, "human_approved": false, "approved_by": null}
+    }
+  ],
+  "release": {"status": "draft", "approved_by": null, "approved_at": null}
+}

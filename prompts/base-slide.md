@@ -12,6 +12,7 @@ CLAIM
 VISIBLE JAPANESE
 - Main title: 「[短い見出し]」
 - Supporting labels: 「[短い要素]」「[短い要素]」「[短い要素]」
+- Copy lock: [locked / may shorten after human approval]
 
 EVIDENCE
 [sourceで確認済みの数字・事実・引用。なければ作らない]
@@ -33,8 +34,9 @@ CHROME POLICY
 - Decorative marks must stay within the outer 2-3% perimeter and must not touch, overlap, or become tangent to content.
 
 REFERENCE ROLES
-- [image]: style reference
-- [image]: logo / person / source reference
+- Image 1 [path]: primary content style reference
+- Image 2 [path]: optional page-role anchor
+- Image 3 [path]: logo / person / source reference
 
 MUST NOT
 - Do not invent numbers, quotes, clients, UI, or achievements.
@@ -43,6 +45,7 @@ MUST NOT
 - Do not create a sparse poster without decision material.
 - Do not leave placeholders for later compositing.
 - Do not force repeated decoration when it reduces content spacing.
+- Do not copy contact-sheet geometry or treat a contact sheet as an input reference.
 
 OUTPUT
 A complete slide image. Include every visible element in the generation itself.

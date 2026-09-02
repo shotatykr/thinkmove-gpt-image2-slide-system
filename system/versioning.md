@@ -24,3 +24,18 @@
 - PATCH：誤字、リンク、説明、互換な調整
 
 各releaseは、対応するdesign-system commitを`upstream.json`へ固定する。
+
+## デッキ単位の固定
+
+各デッキのManifestへ次を保存する。
+
+- skill version
+- prompt version
+- approved reference ID
+- GPT-image2 slide system commit
+- design-system commit
+- generation route、model、quality、size
+
+skill、prompt、model、reference、DESIGN.mdを変更するときは、[`../evals/rubric.md`](../evals/rubric.md)に従って固定5ケースを各3回評価する。単発の成功画像やピクセル一致を品質基準にしない。
+
+skill、prompt、schema、quality contractの現行番号は[`versions.json`](versions.json)を正本にする。番号を変更したら`CHANGELOG.md`と固定ケースの結果も同じ変更へ含める。
