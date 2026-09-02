@@ -5,8 +5,10 @@
     "worldview/core.md",
     "worldview/voice.md",
     "theme/design.json",
-    "theme/globals.css",
-    "assets/"
+    "assets/logo.png",
+    "assets/profile/",
+    "assets/logos/",
+    "assets/manga/"
   ],
   "policy": "Assets are reference inputs for full-image generation, not post-compositing parts."
 }

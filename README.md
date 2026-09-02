@@ -16,10 +16,11 @@ ThinkMoveのスライドを、ロゴ・人物・日本語・図解を含む**完
 ## Quick Start
 
 1. [`AGENTS.md`](AGENTS.md)を読む
-2. [`system/production-guide.md`](system/production-guide.md)に沿って資料の目的とタイトル列を決める
-3. [`prompts/deck-orchestrator.md`](prompts/deck-orchestrator.md)と[`prompts/base-slide.md`](prompts/base-slide.md)を使って各ページを生成する
-4. [`system/qa-checklist.md`](system/qa-checklist.md)で全ページを確認する
-5. 必要ならcontact sheetとPPTXへ格納する
+2. [`DESIGN.md`](DESIGN.md)と[`STYLE.md`](STYLE.md)で画面と言葉の基準を固定する
+3. [`system/production-guide.md`](system/production-guide.md)に沿って資料の目的とタイトル列を決める
+4. [`prompts/deck-orchestrator.md`](prompts/deck-orchestrator.md)と[`prompts/base-slide.md`](prompts/base-slide.md)を使って各ページを生成する
+5. [`system/qa-checklist.md`](system/qa-checklist.md)で全ページを確認する
+6. 必要ならcontact sheetとPPTXへ格納する
 
 ```text
 source.mdからThinkMoveの資料を作って。
@@ -46,8 +47,10 @@ source.mdからThinkMoveの資料を作って。
 
 ```text
 ├── AGENTS.md
+├── DESIGN.md                 # GPT-image2画面設計の正本
+├── STYLE.md                  # 言葉・空気・物語の正本
 ├── brand/                    # design-systemから同期したブランド参照
-├── assets/references/        # 生成へ渡すロゴ・写真・アイコン等
+├── assets/references/        # 生成へ渡すラスタ参照素材
 ├── system/                   # 制作工程・参照画像・QA・バージョン方針
 ├── prompts/                  # 生成・再生成プロンプト
 ├── tastes/                   # 資料目的別のテイスト選択
