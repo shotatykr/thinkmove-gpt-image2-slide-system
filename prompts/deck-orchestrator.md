@@ -22,9 +22,10 @@ sourceをもとに、ThinkMoveのスライド資料を作成してください�
 3. タイトルだけで全体の論理を作る
 4. 各ページのClaim / Evidence / Visual job / Must render / Referencesを定義する
 5. primary tasteを1つ選ぶ
-6. 基準ページを生成し、同じvisual familyで全ページを生成する
-7. QA checklistを通し、不合格ページだけ再生成する
-8. contact sheetとPPTXを作る
+6. 表紙基準と、標準的な情報量を入れた本文基準を別々に生成する
+7. 本文へ継承するのはpalette、typography、texture、線の品質だけとし、表紙固有のgeometryや斜め帯は継承しない
+8. QA checklistを通し、不合格ページだけ再生成する
+9. contact sheetとPPTXを作る
 
 sourceにない数字、成果、引用、顧客情報を作らないでください。
 ```

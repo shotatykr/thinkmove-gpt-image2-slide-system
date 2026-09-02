@@ -24,6 +24,14 @@ ThinkMove: practical density, calm empathy, white/navy/gray foundation,
 restrained teal for forward movement, orange only for one limited emphasis.
 Use the selected primary taste consistently with the rest of the deck.
 
+CHROME POLICY
+- Page role: [cover / section / content / closing]
+- Inherit only: palette, typography, texture, line quality, logo scale.
+- Do not inherit cover-specific geometry, diagonal bands, portrait frames, or card positions.
+- For content slides, keep the content grid clear to the bottom edge. Do not use a large lower-left or lower-right decorative band.
+- If a card, chart, table, or conclusion bar occupies the lower 25%, remove bottom edge decoration entirely.
+- Decorative marks must stay within the outer 2-3% perimeter and must not touch, overlap, or become tangent to content.
+
 REFERENCE ROLES
 - [image]: style reference
 - [image]: logo / person / source reference
@@ -34,6 +42,7 @@ MUST NOT
 - Do not reserve a large empty logo area.
 - Do not create a sparse poster without decision material.
 - Do not leave placeholders for later compositing.
+- Do not force repeated decoration when it reduces content spacing.
 
 OUTPUT
 A complete slide image. Include every visible element in the generation itself.

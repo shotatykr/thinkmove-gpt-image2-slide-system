@@ -13,6 +13,7 @@
 7. References：各参照画像の役割
 8. Must not：架空データ、余計なロゴ、英語化など
 9. Output：16:9、完成スライド画像
+10. Chrome policy：ページ役割に応じて、継承する装飾と消す装飾を明記する
 
 ## Visible Japanese
 
@@ -29,3 +30,14 @@
 - sourceにないKPIや顧客の声を作る
 - 後から直す前提のプレースホルダーを作る
 - 大きなロゴ空白を予約する
+- 表紙固有の斜め帯、写真枠、カード位置を本文へそのまま複製する
+- 装飾とカード、結論バー、図解を接触・重複させる
+
+## Chrome policy
+
+`same visual family`だけでは、生成モデルが基準画像のgeometryまで複製しやすい。本文promptでは次を明記する。
+
+- inherit: palette、typography、texture、line quality、logo scale
+- do not inherit: cover geometry、large diagonal bands、portrait frame、cover-specific whitespace
+- content-safe perimeter: 外周2〜3%は小さな罫線や点だけ
+- bottom rule: 下部にカードまたは結論バーがある場合、下辺の面装飾を置かない
