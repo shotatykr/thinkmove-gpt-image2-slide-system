@@ -43,6 +43,12 @@ source.mdからThinkMoveの資料を作って。
                  PPTX / PDF格納
 ```
 
+## 承認済みリファレンス
+
+- [`quiet-proposal-ai-dialogue-seminar-v1`](examples/approved-decks/ai-dialogue-seminar/README.md): 表紙、本文基準、比較、概念図、構造、役割図、タイムライン、結論の8種類。セミナー・研修向けQuiet Proposalの基準作例
+
+contact sheetは人間の連続性確認に使い、生成モデルへはページ役割に近いanchorを1〜2枚だけ渡します。
+
 ## リポジトリ構成
 
 ```text

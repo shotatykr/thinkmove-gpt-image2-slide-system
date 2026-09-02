@@ -82,6 +82,8 @@ visual familyは、全ページへ同じ装飾形状を貼ることではない�
 - 全tasteの画像やcontact sheetを生成モデルへ同時に渡さない
 - 各ページには、選択したtasteの個別previewだけを使う
 
+QA済みの実制作例を使う場合は、[`examples/approved-decks/`](examples/approved-decks/)から用途に近いデッキを1つだけ選び、そのREADMEで指定された本文基準とページ役割別anchorを使う。contact sheetはデッキのリズム確認用で、生成モデルへの直接入力にはしない。
+
 用途別の選択は[`tastes/README.md`](tastes/README.md)を参照する。
 
 ## 7. 参照素材

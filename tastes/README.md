@@ -12,4 +12,6 @@
 
 選んだtasteに対応する画像を[`../examples/taste-previews/`](../examples/taste-previews/)から1枚だけ参照する。
 
+Quiet Proposalをセミナー・研修へ展開する場合は、承認済みの[`quiet-proposal-ai-dialogue-seminar-v1`](../examples/approved-decks/ai-dialogue-seminar/README.md)を使える。先にREADMEのanchor mapを読み、本文基準とページ役割に近い画像だけを選ぶ。
+
 既存previewはテイストのseedであり、「全面生成・後合成なし」の工程証明ではない。新方式で合格した例へ段階的に置き換える。
