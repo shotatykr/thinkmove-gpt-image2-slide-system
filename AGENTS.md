@@ -5,14 +5,14 @@
 ## 最初に読む順番
 
 1. `AGENTS.md`
-2. `system/production-guide.md`
-3. `system/reference-input-policy.md`
-4. `system/prompt-contract.md`
-5. `brand/worldview/core.md`
-6. `brand/worldview/voice.md`
-7. `brand/theme/design.json`
-8. 用途に合う`tastes/*.md`を1つだけ
-9. `prompts/base-slide.md`
+2. `DESIGN.md`
+3. `STYLE.md`
+4. `system/production-guide.md`
+5. `system/reference-input-policy.md`
+6. `system/prompt-contract.md`
+7. 用途に合う`tastes/*.md`を1つだけ
+8. `prompts/base-slide.md`
+9. 必要時だけ`brand/worldview/`と`brand/theme/design.json`
 10. 出力前に`system/qa-checklist.md`
 
 全taste、全画像、全promptを同時に読まない。資料用途に必要な参照だけを選ぶ。
@@ -31,7 +31,7 @@
 
 ## 参照画像
 
-`assets/references/`のロゴ、写真、漫画、アイコン、図解は、生成モデルへ渡す参照素材です。最終画像へピクセル単位で貼り付ける素材ではありません。
+`assets/references/`のロゴ、写真、漫画は、生成モデルへ渡すラスタ参照素材です。最終画像へピクセル単位で貼り付ける素材ではありません。
 
 参照画像を使っても、ロゴ形状や人物の同一性は完全には保証されません。完全一致が完了条件なら、この方式を使わず編集可能な制作方式へ切り替えます。
 

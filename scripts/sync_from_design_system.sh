@@ -10,7 +10,7 @@ fi
 SOURCE_DIR="$(cd "$1" && pwd)"
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-for required in worldview/core.md worldview/voice.md theme/design.json theme/globals.css assets/logo.png; do
+for required in worldview/core.md worldview/voice.md theme/design.json assets/logo.png assets/profile/toyokura-shota.jpg; do
   if [ ! -f "$SOURCE_DIR/$required" ]; then
     echo "Missing upstream file: $SOURCE_DIR/$required" >&2
     exit 1
@@ -24,14 +24,21 @@ mkdir -p "$STAGE_DIR/brand/worldview" "$STAGE_DIR/brand/theme" "$STAGE_DIR/asset
 cp "$SOURCE_DIR/worldview/core.md" "$STAGE_DIR/brand/worldview/core.md"
 cp "$SOURCE_DIR/worldview/voice.md" "$STAGE_DIR/brand/worldview/voice.md"
 cp "$SOURCE_DIR/theme/design.json" "$STAGE_DIR/brand/theme/design.json"
-cp "$SOURCE_DIR/theme/globals.css" "$STAGE_DIR/brand/theme/globals.css"
-cp -R "$SOURCE_DIR/assets/." "$STAGE_DIR/assets/references/"
+cp "$SOURCE_DIR/assets/logo.png" "$STAGE_DIR/assets/references/logo.png"
+cp -R "$SOURCE_DIR/assets/profile" "$STAGE_DIR/assets/references/profile"
+cp -R "$SOURCE_DIR/assets/logos" "$STAGE_DIR/assets/references/logos"
+cp -R "$SOURCE_DIR/assets/manga" "$STAGE_DIR/assets/references/manga"
 
-rm -f "$STAGE_DIR/assets/references/icons/_contact-sheet.html"
-rm -f "$STAGE_DIR/assets/references/diagrams/_contact-sheet.html"
-if [ -f "$STAGE_DIR/assets/references/README.md" ]; then
-  mv "$STAGE_DIR/assets/references/README.md" "$STAGE_DIR/assets/references/SOURCE_MANIFEST.md"
-fi
+sed -i.bak \
+  -e 's|\[`theme/globals.css`\](../theme/globals.css) ／ \[`theme/design.json`\](../theme/design.json)|[`DESIGN.md`](../../DESIGN.md) と [`theme/design.json`](../theme/design.json)|g' \
+  -e 's|\[`theme/globals.css`\](../theme/globals.css) と \[`theme/design.json`\](../theme/design.json)|[`DESIGN.md`](../../DESIGN.md) と [`theme/design.json`](../theme/design.json)|g' \
+  "$STAGE_DIR/brand/worldview/core.md"
+rm -f "$STAGE_DIR/brand/worldview/core.md.bak"
+
+sed -i.bak -E \
+  's#^  "\$description": ".*",$#  "$description": "ThinkMove visual token snapshot for GPT-image2 prompt reference. DESIGN.md is the human-readable authority.",#' \
+  "$STAGE_DIR/brand/theme/design.json"
+rm -f "$STAGE_DIR/brand/theme/design.json.bak"
 
 rsync -a --delete "$STAGE_DIR/brand/" "$ROOT_DIR/brand/"
 rsync -a --delete "$STAGE_DIR/assets/references/" "$ROOT_DIR/assets/references/"

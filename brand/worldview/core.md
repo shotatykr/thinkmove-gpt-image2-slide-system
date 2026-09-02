@@ -13,7 +13,7 @@
 | 分類 | 扱い | 正のソース |
 |------|------|-----------|
 | **気分・レトリック・人格・言葉の設計** | このドキュメントで**固定**する | このページ |
-| **色コード・余白px・shadow・radius** | 進化する。実装に任せる | [`theme/globals.css`](../theme/globals.css) ／ [`theme/design.json`](../theme/design.json) |
+| **色コード・余白px・shadow・radius** | 進化する。実装に任せる | [`DESIGN.md`](../../DESIGN.md) と [`theme/design.json`](../theme/design.json) |
 
 v3 は thinkmove.jp の現物を通読した上での言語化。v1 は LP 要件定義時の設計図的仮置き（「静かな書斎／夜明け前」等のメタファーは**クール寄りすぎ**と判明したため v3 で破棄）。
 
@@ -142,7 +142,7 @@ v3 は thinkmove.jp の現物を通読した上での言語化。v1 は LP 要�
 
 ## 8. 視覚言語の思想
 
-数値は [`theme/globals.css`](../theme/globals.css) と [`theme/design.json`](../theme/design.json) を正とする。ここでは**役割の意味**のみ定義。
+数値は [`DESIGN.md`](../../DESIGN.md) と [`theme/design.json`](../theme/design.json) を正とする。ここでは**役割の意味**のみ定義。
 
 ### 8.1 配色
 
@@ -244,7 +244,7 @@ v3 は thinkmove.jp の現物を通読した上での言語化。v1 は LP 要�
 
 - **気分・コアレトリック・一文要約**: めったに変えない
 - **造語リスト**: 新しい造語が定着したら追記
-- **視覚言語の数値**: このドキュメントには書かない。[`theme/globals.css`](../theme/globals.css) と [`theme/design.json`](../theme/design.json) が正
+- **視覚言語の数値**: このドキュメントには書かない。[`DESIGN.md`](../../DESIGN.md) と [`theme/design.json`](../theme/design.json) が正
 - 実装と思想が乖離したら、どちらが正しいかを判断してから片方を更新（沈黙のズレを放置しない）
 
 ### 変更履歴

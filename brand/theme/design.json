@@ -1,6 +1,6 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
-  "$description": "ThinkMove Design Tokens v2 (W3C Design Tokens Community Group format). Mirror of theme/globals.css. AI tools (Pencil/Figma AI/Claude Design) read this for color/radius/shadow application.",
+  "$description": "ThinkMove visual token snapshot for GPT-image2 prompt reference. DESIGN.md is the human-readable authority.",
   "color": {
     "ink":           { "$value": "#0a1628", "$type": "color", "$description": "最深 navy。CTA前のボタン、ダーク section、flagship card" },
     "primary":       { "$value": "#1e3a5f", "$type": "color", "$description": "中間 navy。light 上の見出し、icon accent" },
